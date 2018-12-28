@@ -12,7 +12,7 @@
     'use strict';
     function isblog(){
         // Requires Jquery
-        return $(".cmty-cat-admin-heading:contains('some text')").length > 0;
+        return $(".cmty-cat-admin-heading:contains('Blog')").length > 0;
     }
     // Options
     const normalset = true;
