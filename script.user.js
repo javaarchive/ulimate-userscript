@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Ultimate user script(With AoPS scripts, and more)
 // @namespace    http://tampermonkey.net/
-// @version      0.1.1
+// @version      0.1.2
 // @description  Make web browsing easier!
 // @author       You
 // @match        https://*/*
