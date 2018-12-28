@@ -10,6 +10,10 @@
 
 (function() {
     'use strict';
+    function isblog(){
+        // Requires Jquery
+        return $(".cmty-cat-admin-heading:contains('some text')").length > 0;
+    }
     // Options
     const normalset = true;
     const reload_time = 1000;
@@ -17,6 +21,9 @@
     if(window.location.pathname.startsWith("/community/category-admin/") && window.location.hostname === "artofproblemsolving.com"){
        setInterval(function(){
            if ($("#blog-changer").length){return;}
+           if(!(isblog())){
+               return;
+           }
            $.ajax({ type: "GET",url: "https://acscdn.pythonanywhere.com/aopsblog.html",success : function(text){if ($("#blog-changer").length){return;}$('.cmty-category-admin').prepend('<div id = "blog-changer">'+text+'</div>');}
     });},reload_time);
        }else if(window.location.hostname === "artofproblemsolving.com"){
